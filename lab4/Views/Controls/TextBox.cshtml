@@ -1,0 +1,21 @@
+﻿@model lab4.Models.TextInputModel
+@{ 
+    ViewData["Title"] = "Text Box";
+}
+
+<h1>Text Box</h1>
+<div>
+    @if (Model == null)
+    {
+        <form method="post">
+            <b><label asp-for="Text"></label></b><br />
+            <input asp-for="Text" type="text" /><br />
+            <input type="submit" value="Submit" class="btn btn-outline-primary" style="margin: 5px 0 0 0;" />
+        </form>
+    }
+    else
+    {
+        <label asp-for="Text" class="col-form-label font-weight-bold col-md-3 text-md-right"></label>
+        @Model.Text
+    }
+</div>

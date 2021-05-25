@@ -1,0 +1,19 @@
+﻿@model lab4.Models.ConfirmPwModel
+@{
+    ViewData["Title"] = "Reset your password";
+}
+
+<h1>Reset your password</h1>
+<br />
+<form method="post">
+    <label asp-for="Password" class="font-weight-bold"></label><br />
+    <input type="password" asp-for="Password" style="margin:-15px 0 0 0; width: 265px;" /> <span asp-validation-for="Password" style="color: red;"></span>
+    <br />
+    <label asp-for="ConfirmPassword" class="font-weight-bold"></label><br />
+    <input type="password" asp-for="ConfirmPassword" style="margin:-15px 0 0 0; width: 265px;" /> <span asp-validation-for="ConfirmPassword" style="color: red;"></span>
+    <br />
+    <div style="margin:10px 0 0 0;">
+        <input type="submit" value="Change" class="btn btn-outline-primary" name="action" />
+    </div>
+</form>
+

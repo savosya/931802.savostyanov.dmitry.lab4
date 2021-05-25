@@ -1,0 +1,17 @@
+﻿@model lab4.Models.LoginModel
+@{
+    ViewData["Title"] = "Reset your password";
+}
+
+<h1>Reset your password</h1>
+<form method="post">
+    <label asp-for="Email" class="font-weight-bold"></label>
+    <br />
+    <input type="text" asp-for="Email" style="margin:-15px 0 0 0; width: 265px;" /> <span asp-validation-for="Email" style="color: red;"></span>
+    <br />
+    <div style="margin:10px 0 0 0;">
+        <input type="submit" value="Send me a code" class="btn btn-outline-primary" name="action" />
+        <input type="submit" value="I have a code" class="btn btn-outline-secondary" name="action" />
+    </div>
+</form>
+

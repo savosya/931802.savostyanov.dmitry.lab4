@@ -1,0 +1,33 @@
+﻿@model lab4.Models.OneSelectModel
+@{
+    ViewData["Title"] = "Drop-down List";
+}
+
+<h1>Drop-down List</h1>
+<div>
+   @if (Model == null)
+    {
+    <form method="post">
+        <select asp-for="Month" name="Month" style="width: 200px;" required>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option >May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <br />
+        <input type="submit" value="Submit" class="btn btn-outline-primary" style="margin: 5px 0 0 0;" />
+    </form>
+    }
+    else
+    {
+        <label asp-for="Month" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.Month
+    }
+</div>

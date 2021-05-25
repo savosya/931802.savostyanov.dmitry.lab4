@@ -1,0 +1,31 @@
+﻿
+@model lab4.Models.UserModel
+@{
+    ViewData["Title"] = "Signed In";
+}
+
+<h1>Sign Up Result</h1>
+<br />
+
+<label asp-for="FirstName" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.FirstName
+<br />
+<label asp-for="LastName" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.LastName
+<br />
+<label asp-for="Birthday" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.Birthday.ToShortDateString()
+<br />
+<label asp-for="Gender" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.Gender
+<br />
+<label asp-for="Email" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.Email
+<br />
+<label asp-for="Password" class="col-form-label font-weight-bold col-md-3 text-md-right"></label> @Model.Password
+<br />
+
+
+<form method="get" style="margin: 10px 0 0 0;">
+    <button asp-controller="Account" asp-action="LogOut" class="btn btn-outline-primary" style="width:150px;margin: 0 10px 0 0;">Log Out</button>
+    <button asp-controller="Account" asp-action="ResetPw_1" class="btn btn-outline-secondary" style="width:150px;">Reset Password</button>
+</form>
+
+
+
+

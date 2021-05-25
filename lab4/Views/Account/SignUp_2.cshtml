@@ -1,0 +1,32 @@
+﻿@model lab4.Models.RegisterModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h1>Sign Up</h1>
+<br />
+@Html.ValidationSummary()
+<form method="post" asp-antiforgery="true">
+
+    <div class="email">
+        <label asp-for="Email" class="font-weight-bold" style="margin:0 0 -5px 0;"></label><br />
+        <input type="text" asp-for="Email" /><span asp-validation-for="Email" style="color:red;margin:0 0 0 5px;"></span>
+    </div>
+
+    <div class="password">
+        <label asp-for="Password" class="font-weight-bold" style="margin:8px 0 -5px 0;"></label><br />
+        <input type="password" asp-for="Password" /><span asp-validation-for="Password" style="color:red;margin:0 0 0 5px;"></span>
+    </div>
+
+    <div class="password">
+        <label asp-for="ConfirmPassword" class="font-weight-bold" style="margin:8px 0 -5px 0;"></label><br />
+        <input type="password" asp-for="ConfirmPassword" /><span asp-validation-for="ConfirmPassword" style="color:red;margin:0 0 0 5px;"></span>
+    </div>
+    <br />
+    <div class="toRemember">
+        <input type="checkbox" asp-for="toRemember" /> Remember? <br />
+    </div>
+    <br />
+    <input type="submit" value="Complete sign up" class="btn btn-outline-primary" style="margin: 5px 0 0 0;" />
+</form>
+
