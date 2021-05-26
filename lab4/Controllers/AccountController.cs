@@ -77,8 +77,9 @@ namespace lab4.Controllers
                 });
 
                 await _userDB.SaveChangesAsync();
+                return RedirectToAction("LogIn");
             }
-            return RedirectToAction("LogIn");
+            return View();
         }
 
 
